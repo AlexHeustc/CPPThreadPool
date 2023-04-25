@@ -1,0 +1,4 @@
+/home/book/apps/cmake-3.24.0-linux-x86_64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ -G "CodeBlocks - Unix Makefiles" -S /tmp/tmp.EOQTpyeBN6 -B /tmp/tmp.EOQTpyeBN6/cmake-build-debug-remote-host
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /tmp/tmp.EOQTpyeBN6/cmake-build-debug-remote-host
