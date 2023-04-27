@@ -19,8 +19,8 @@ struct Task{
         function=nullptr;
         arg= nullptr;
     };
-    Task(callback f,T* arg)
-    :function(f),arg(arg)
+    Task(callback f,void *arg)
+    :function(f),arg((T*)arg)
     {};
 
     callback function;
@@ -41,14 +41,13 @@ public:
     //get the size of queue
     inline int tasknumber()
     {
-        return m_task.size();
+        return m_queue.size();
     }
 
 
 private:
-    std::queue<Task<T>> m_task;
-private:
-    pthread_mutex_t m_mutex{};
+    std::queue<Task<T>> m_queue;
+    pthread_mutex_t m_mutex_queue{};
 
 };
 

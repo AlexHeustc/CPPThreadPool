@@ -31,7 +31,7 @@ private:
 
 private:
 
-    pthread_mutex_t m_lock{};
+    pthread_mutex_t m_mutex_pool{};
     pthread_cond_t m_notEmpty{};// 任务队列是不是空了
     pthread_t* m_threadIDs;
     pthread_t m_managerID{};
@@ -45,7 +45,6 @@ private:
     int m_exitNum{};
 
     bool m_shutdown = false; //whether to destroy the threadpool
-
 };
 
 
